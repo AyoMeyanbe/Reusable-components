@@ -1,24 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import Greet from './components/Greetings';
+import ProfileCard from './components/ProfileCard';
+import AlexaImage from './images/alexa.png'
+import SiriImage from './images/siri.png'
+import CortanaImage from './images/cortana.png'
 
 function App() {
+  const name = "Ayo";
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name ={name}/>
     </div>
+
+    <div>
+      <h3>Personal Assistance</h3>
+    </div>
+
+    <div className='container'>
+      <ProfileCard
+      title='Alexa'
+      handle='@alexa123'
+      image={AlexaImage}
+      description="Alexa lorem ipsum dolor sit"
+      />
+      <ProfileCard
+      title='Siri'
+      handle='@siri'
+      image={SiriImage}
+      description="Siri lorem ipsum dolor sit"
+      />
+      <ProfileCard
+      title='Cortana'
+      handle='@cortana334'
+      image={CortanaImage}
+      description="Cortana lorem ipsum dolor sit"
+      />
+    </div>
+    </>
   );
 }
 
